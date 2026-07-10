@@ -1,6 +1,6 @@
 import streamlit as st
-from archivo import Archivo
-from analizador_lexico import AnalizadorLexico
+from validadores.archivo import Archivo
+from analizadores.analizador_lexico import AnalizadorLexico
 
 
 class App:
