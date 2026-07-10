@@ -6,11 +6,12 @@ from analizadores.analizador_lexico import AnalizadorLexico
 class App:
 
     def __init__(self):
-        st.set_page_config(page_title="Analizador Lexico", layout="wide")
+        st.set_page_config(page_title="Poyecto", layout="wide")
         self.analizador = AnalizadorLexico()
 
     def ejecutar(self):
-        st.title("Analizador Lexico con ANTLR y Streamlit")
+        st.title("Proyecto Lenguajes y Automatas II")
+        st.write("Analizador Lexico con ANTLR y Streamlit")
         st.write("Sube un archivo `.java` para ver tokens y errores lexicos.")
 
         archivo_subido = st.file_uploader("Selecciona tu archivo", type=["java"])
