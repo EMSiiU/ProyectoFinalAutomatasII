@@ -218,5 +218,3 @@ COMENTARIO_LINEA: '//' ~[\r\n]* -> skip;
 COMENTARIO_BLOQUE: '/*' .*? '*/' -> skip;
 
 WS: [ \t\r\n]+ -> skip;
-
-ERROR_TOKEN: . ;
