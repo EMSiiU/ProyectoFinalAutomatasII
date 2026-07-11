@@ -1,7 +1,100 @@
 grammar Expr;
 
-root: expr EOF ;
-expr: EOF;    
+//  FASE SINTÁCTICA
+programa: tipoDecl+ EOF;
+
+tipoDecl: claseDecl| interfaceDecl;
+
+claseDecl: modificador* CLASS IDT(EXTENDS IDT)?(IMPLEMENTS IDT (COMA IDT)*)?LLA_1 miembroClase* LLA_2;
+
+interfaceDecl: modificador* INTERFACE IDT(EXTENDS IDT (COMA IDT)*)?LLA_1 miembroInterfaz* LLA_2;
+
+miembroInterfaz: tipo IDT PAR_1 listaParametros? PAR_2 PUNTO_COMA
+    | modificador* tipo declaradorVariable PUNTO_COMA;
+
+miembroClase: atributoDecl| constructorDecl| metodoDecl| claseDecl;
+
+modificador: PUBLIC | PRIVATE | PROTECTED| STATIC | FINAL | ABSTRACT| SYNCHRONIZED | VOLATILE | TRANSIENT | NATIVE | STRICTFP;
+
+tipo: (BYTE|SHORT|INT|LONG|FLOAT|DOUBLE|CHAR|BOOLEAN|STRING|IDT) (COR_1 COR_2)*;
+
+atributoDecl: modificador* tipo declaradorVariable (COMA declaradorVariable)* PUNTO_COMA;
+
+declaradorVariable: IDT (ASIGNACION expr)?;
+
+constructorDecl: modificador* IDT PAR_1 listaParametros? PAR_2 bloque;
+
+metodoDecl: modificador* (tipo | VOID) IDT PAR_1 listaParametros? PAR_2 (THROWS IDT (COMA IDT)*)?(bloque | PUNTO_COMA);
+
+listaParametros: parametro (COMA parametro)*;
+
+parametro: tipo IDT;
+
+bloque: LLA_1 sentencia* LLA_2;
+
+sentencia: bloque
+    | declaracionVariable
+    | sentenciaIf
+    | sentenciaFor
+    | sentenciaWhile
+    | sentenciaDoWhile
+    | sentenciaTry
+    | sentenciaReturn
+    | BREAK PUNTO_COMA
+    | CONTINUE PUNTO_COMA
+    | THROW expr PUNTO_COMA
+    | sentenciaExpr
+    | PUNTO_COMA;
+
+declaracionVariable: tipo declaradorVariable (COMA declaradorVariable)* PUNTO_COMA;
+
+sentenciaIf: IF PAR_1 expr PAR_2 sentencia (ELSE sentencia)?;
+
+sentenciaFor: FOR PAR_1 forInit? PUNTO_COMA expr? PUNTO_COMA expr? PAR_2 sentencia;
+
+forInit: declaracionVariable| expr (COMA expr)*;
+
+sentenciaWhile: WHILE PAR_1 expr PAR_2 sentencia;
+
+sentenciaDoWhile: DO sentencia WHILE PAR_1 expr PAR_2 PUNTO_COMA;
+
+sentenciaTry: TRY bloque catchClause* (FINALLY bloque)?;
+
+catchClause: CATCH PAR_1 tipo IDT PAR_2 bloque;
+
+sentenciaReturn: RETURN expr? PUNTO_COMA;
+
+sentenciaExpr: expr PUNTO_COMA;
+
+expr: 
+    SYSTEM PUNTO OUT PUNTO PRINTLN PAR_1 expr? PAR_2      
+    | expr PUNTO IDT PAR_1 listaArgs? PAR_2                 
+    | expr PUNTO IDT                                        
+    | NEW IDT PAR_1 listaArgs? PAR_2                       
+    | expr COR_1 expr COR_2                                
+    | expr (INCREMENTO | DECREMENTO)                        
+    | (INCREMENTO | DECREMENTO) expr                        
+    | (MAS | MENOS | NOT) expr                              
+    | expr (POR | ENTRE | MODULO) expr                      
+    | expr (MAS | MENOS) expr                               
+    | expr (MENOR | MAYOR | MENOR_IGUAL | MAYOR_IGUAL) expr 
+    | expr (IGUAL | DIFERENTE) expr                          
+    | expr AND expr                                          
+    | expr OR expr                                           
+    | expr TERNARIO expr DOS_PUNTOS expr                     
+    | <assoc=right> expr ASIGNACION expr                     
+    | PAR_1 expr PAR_2                                       
+    | THIS                                                    
+    | SUPER                                                   
+    | IDT PAR_1 listaArgs? PAR_2                             
+    | IDT                                                     
+    | literal;
+
+listaArgs: expr (COMA expr)*;
+
+literal: ENTERO| DECIMAL| CADENA| (TRUE | FALSE)| NULL;
+
+
 
 // FASE LEXICA
 /* PALABRAS RESERVADAS */
@@ -77,6 +170,7 @@ ASSERT: 'assert';
 IDT: [a-zA-Z_$] [a-zA-Z0-9_$]*;
 ENTERO: [0-9]+;
 DECIMAL: [0-9]+ '.' [0-9]+;
+CARACTER: '\'' ~['\r\n] '\'' ;
 CADENA: '"' ~["\r\n]* '"';
 
 //OPERADORES MATEMATICOS
