@@ -28,8 +28,8 @@ public class ExprParser extends Parser {
 		ENTRE=66, MODULO=67, AND=68, OR=69, NOT=70, MAYOR=71, MAYOR_IGUAL=72, 
 		MENOR=73, MENOR_IGUAL=74, IGUAL=75, DIFERENTE=76, INCREMENTO=77, DECREMENTO=78, 
 		TERNARIO=79, PAR_1=80, PAR_2=81, COR_1=82, COR_2=83, LLA_1=84, LLA_2=85, 
-		PUNTO_COMA=86, PUNTO=87, COMA=88, DOS_PUNTOS=89, ARROBA=90, COMENTARIO_LINEA=91, 
-		COMENTARIO_BLOQUE=92, WS=93;
+		PUNTO_COMA=86, PUNTO=87, COMA=88, DOS_PUNTOS=89, COMENTARIO_LINEA=90, 
+		COMENTARIO_BLOQUE=91, WS=92;
 	public static final int
 		RULE_programa = 0, RULE_tipoDecl = 1, RULE_claseDecl = 2, RULE_interfaceDecl = 3, 
 		RULE_miembroInterfaz = 4, RULE_miembroClase = 5, RULE_modificador = 6, 
@@ -66,7 +66,7 @@ public class ExprParser extends Parser {
 			"'assert'", null, null, null, null, null, "'='", "'+'", "'-'", "'*'", 
 			"'/'", "'%'", "'&&'", "'||'", "'!'", "'>'", "'>='", "'<'", "'<='", "'=='", 
 			"'!='", "'++'", "'--'", "'?'", "'('", "')'", "'['", "']'", "'{'", "'}'", 
-			"';'", "'.'", "','", "':'", "'@'"
+			"';'", "'.'", "','", "':'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
@@ -84,7 +84,7 @@ public class ExprParser extends Parser {
 			"AND", "OR", "NOT", "MAYOR", "MAYOR_IGUAL", "MENOR", "MENOR_IGUAL", "IGUAL", 
 			"DIFERENTE", "INCREMENTO", "DECREMENTO", "TERNARIO", "PAR_1", "PAR_2", 
 			"COR_1", "COR_2", "LLA_1", "LLA_2", "PUNTO_COMA", "PUNTO", "COMA", "DOS_PUNTOS", 
-			"ARROBA", "COMENTARIO_LINEA", "COMENTARIO_BLOQUE", "WS"
+			"COMENTARIO_LINEA", "COMENTARIO_BLOQUE", "WS"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -2647,7 +2647,7 @@ public class ExprParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\u0004\u0001]\u01d2\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001\u0002"+
+		"\u0004\u0001\\\u01d2\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001\u0002"+
 		"\u0002\u0007\u0002\u0002\u0003\u0007\u0003\u0002\u0004\u0007\u0004\u0002"+
 		"\u0005\u0007\u0005\u0002\u0006\u0007\u0006\u0002\u0007\u0007\u0007\u0002"+
 		"\b\u0007\b\u0002\t\u0007\t\u0002\n\u0007\n\u0002\u000b\u0007\u000b\u0002"+

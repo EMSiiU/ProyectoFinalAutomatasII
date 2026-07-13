@@ -212,7 +212,7 @@ PUNTO: '.';
 COMA: ',';
 DOS_PUNTOS: ':';
 
-ARROBA: '@';
+//ARROBA: '@';
 
 COMENTARIO_LINEA: '//' ~[\r\n]* -> skip;
 COMENTARIO_BLOQUE: '/*' .*? '*/' -> skip;
