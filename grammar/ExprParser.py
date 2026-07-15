@@ -1,4 +1,4 @@
-# Generated from ./grammar/Expr.g4 by ANTLR 4.13.2
+# Generated from ./Expr.g4 by ANTLR 4.13.2
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
@@ -398,6 +398,14 @@ class ExprParser ( Parser ):
         def getRuleIndex(self):
             return ExprParser.RULE_programa
 
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterPrograma" ):
+                listener.enterPrograma(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitPrograma" ):
+                listener.exitPrograma(self)
+
 
 
 
@@ -448,6 +456,14 @@ class ExprParser ( Parser ):
 
         def getRuleIndex(self):
             return ExprParser.RULE_tipoDecl
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterTipoDecl" ):
+                listener.enterTipoDecl(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitTipoDecl" ):
+                listener.exitTipoDecl(self)
 
 
 
@@ -532,6 +548,14 @@ class ExprParser ( Parser ):
 
         def getRuleIndex(self):
             return ExprParser.RULE_claseDecl
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterClaseDecl" ):
+                listener.enterClaseDecl(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitClaseDecl" ):
+                listener.exitClaseDecl(self)
 
 
 
@@ -660,6 +684,14 @@ class ExprParser ( Parser ):
         def getRuleIndex(self):
             return ExprParser.RULE_interfaceDecl
 
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterInterfaceDecl" ):
+                listener.enterInterfaceDecl(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitInterfaceDecl" ):
+                listener.exitInterfaceDecl(self)
+
 
 
 
@@ -770,6 +802,14 @@ class ExprParser ( Parser ):
         def getRuleIndex(self):
             return ExprParser.RULE_miembroInterfaz
 
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterMiembroInterfaz" ):
+                listener.enterMiembroInterfaz(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitMiembroInterfaz" ):
+                listener.exitMiembroInterfaz(self)
+
 
 
 
@@ -860,6 +900,14 @@ class ExprParser ( Parser ):
         def getRuleIndex(self):
             return ExprParser.RULE_miembroClase
 
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterMiembroClase" ):
+                listener.enterMiembroClase(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitMiembroClase" ):
+                listener.exitMiembroClase(self)
+
 
 
 
@@ -948,6 +996,14 @@ class ExprParser ( Parser ):
         def getRuleIndex(self):
             return ExprParser.RULE_modificador
 
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterModificador" ):
+                listener.enterModificador(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitModificador" ):
+                listener.exitModificador(self)
+
 
 
 
@@ -1026,6 +1082,14 @@ class ExprParser ( Parser ):
         def getRuleIndex(self):
             return ExprParser.RULE_tipo
 
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterTipo" ):
+                listener.enterTipo(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitTipo" ):
+                listener.exitTipo(self)
+
 
 
 
@@ -1101,6 +1165,14 @@ class ExprParser ( Parser ):
         def getRuleIndex(self):
             return ExprParser.RULE_atributoDecl
 
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterAtributoDecl" ):
+                listener.enterAtributoDecl(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitAtributoDecl" ):
+                listener.exitAtributoDecl(self)
+
 
 
 
@@ -1168,6 +1240,14 @@ class ExprParser ( Parser ):
         def getRuleIndex(self):
             return ExprParser.RULE_declaradorVariable
 
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterDeclaradorVariable" ):
+                listener.enterDeclaradorVariable(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitDeclaradorVariable" ):
+                listener.exitDeclaradorVariable(self)
+
 
 
 
@@ -1232,6 +1312,14 @@ class ExprParser ( Parser ):
 
         def getRuleIndex(self):
             return ExprParser.RULE_constructorDecl
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterConstructorDecl" ):
+                listener.enterConstructorDecl(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitConstructorDecl" ):
+                listener.exitConstructorDecl(self)
 
 
 
@@ -1333,6 +1421,14 @@ class ExprParser ( Parser ):
 
         def getRuleIndex(self):
             return ExprParser.RULE_metodoDecl
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterMetodoDecl" ):
+                listener.enterMetodoDecl(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitMetodoDecl" ):
+                listener.exitMetodoDecl(self)
 
 
 
@@ -1450,6 +1546,14 @@ class ExprParser ( Parser ):
         def getRuleIndex(self):
             return ExprParser.RULE_listaParametros
 
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterListaParametros" ):
+                listener.enterListaParametros(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitListaParametros" ):
+                listener.exitListaParametros(self)
+
 
 
 
@@ -1500,6 +1604,14 @@ class ExprParser ( Parser ):
         def getRuleIndex(self):
             return ExprParser.RULE_parametro
 
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterParametro" ):
+                listener.enterParametro(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitParametro" ):
+                listener.exitParametro(self)
+
 
 
 
@@ -1544,6 +1656,14 @@ class ExprParser ( Parser ):
 
         def getRuleIndex(self):
             return ExprParser.RULE_bloque
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterBloque" ):
+                listener.enterBloque(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitBloque" ):
+                listener.exitBloque(self)
 
 
 
@@ -1639,6 +1759,14 @@ class ExprParser ( Parser ):
 
         def getRuleIndex(self):
             return ExprParser.RULE_sentencia
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSentencia" ):
+                listener.enterSentencia(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSentencia" ):
+                listener.exitSentencia(self)
 
 
 
@@ -1777,6 +1905,14 @@ class ExprParser ( Parser ):
         def getRuleIndex(self):
             return ExprParser.RULE_declaracionVariable
 
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterDeclaracionVariable" ):
+                listener.enterDeclaracionVariable(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitDeclaracionVariable" ):
+                listener.exitDeclaracionVariable(self)
+
 
 
 
@@ -1846,6 +1982,14 @@ class ExprParser ( Parser ):
 
         def getRuleIndex(self):
             return ExprParser.RULE_sentenciaIf
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSentenciaIf" ):
+                listener.enterSentenciaIf(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSentenciaIf" ):
+                listener.exitSentenciaIf(self)
 
 
 
@@ -1924,6 +2068,14 @@ class ExprParser ( Parser ):
 
         def getRuleIndex(self):
             return ExprParser.RULE_sentenciaFor
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSentenciaFor" ):
+                listener.enterSentenciaFor(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSentenciaFor" ):
+                listener.exitSentenciaFor(self)
 
 
 
@@ -2007,6 +2159,14 @@ class ExprParser ( Parser ):
         def getRuleIndex(self):
             return ExprParser.RULE_forInit
 
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterForInit" ):
+                listener.enterForInit(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitForInit" ):
+                listener.exitForInit(self)
+
 
 
 
@@ -2080,6 +2240,14 @@ class ExprParser ( Parser ):
         def getRuleIndex(self):
             return ExprParser.RULE_sentenciaWhile
 
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSentenciaWhile" ):
+                listener.enterSentenciaWhile(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSentenciaWhile" ):
+                listener.exitSentenciaWhile(self)
+
 
 
 
@@ -2140,6 +2308,14 @@ class ExprParser ( Parser ):
 
         def getRuleIndex(self):
             return ExprParser.RULE_sentenciaDoWhile
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSentenciaDoWhile" ):
+                listener.enterSentenciaDoWhile(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSentenciaDoWhile" ):
+                listener.exitSentenciaDoWhile(self)
 
 
 
@@ -2202,6 +2378,14 @@ class ExprParser ( Parser ):
 
         def getRuleIndex(self):
             return ExprParser.RULE_sentenciaTry
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSentenciaTry" ):
+                listener.enterSentenciaTry(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSentenciaTry" ):
+                listener.exitSentenciaTry(self)
 
 
 
@@ -2276,6 +2460,14 @@ class ExprParser ( Parser ):
         def getRuleIndex(self):
             return ExprParser.RULE_catchClause
 
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterCatchClause" ):
+                listener.enterCatchClause(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitCatchClause" ):
+                listener.exitCatchClause(self)
+
 
 
 
@@ -2326,6 +2518,14 @@ class ExprParser ( Parser ):
         def getRuleIndex(self):
             return ExprParser.RULE_sentenciaReturn
 
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSentenciaReturn" ):
+                listener.enterSentenciaReturn(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSentenciaReturn" ):
+                listener.exitSentenciaReturn(self)
+
 
 
 
@@ -2374,6 +2574,14 @@ class ExprParser ( Parser ):
         def getRuleIndex(self):
             return ExprParser.RULE_sentenciaExpr
 
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSentenciaExpr" ):
+                listener.enterSentenciaExpr(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSentenciaExpr" ):
+                listener.exitSentenciaExpr(self)
+
 
 
 
@@ -2403,26 +2611,45 @@ class ExprParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def SYSTEM(self):
-            return self.getToken(ExprParser.SYSTEM, 0)
 
-        def PUNTO(self, i:int=None):
-            if i is None:
-                return self.getTokens(ExprParser.PUNTO)
-            else:
-                return self.getToken(ExprParser.PUNTO, i)
+        def getRuleIndex(self):
+            return ExprParser.RULE_expr
 
-        def OUT(self):
-            return self.getToken(ExprParser.OUT, 0)
+     
+        def copyFrom(self, ctx:ParserRuleContext):
+            super().copyFrom(ctx)
 
-        def PRINTLN(self):
-            return self.getToken(ExprParser.PRINTLN, 0)
 
+    class LlamadaMetodoSinObjetoContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ExprParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def IDT(self):
+            return self.getToken(ExprParser.IDT, 0)
         def PAR_1(self):
             return self.getToken(ExprParser.PAR_1, 0)
-
         def PAR_2(self):
             return self.getToken(ExprParser.PAR_2, 0)
+        def listaArgs(self):
+            return self.getTypedRuleContext(ExprParser.ListaArgsContext,0)
+
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterLlamadaMetodoSinObjeto" ):
+                listener.enterLlamadaMetodoSinObjeto(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitLlamadaMetodoSinObjeto" ):
+                listener.exitLlamadaMetodoSinObjeto(self)
+
+
+    class OrContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ExprParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
 
         def expr(self, i:int=None):
             if i is None:
@@ -2430,92 +2657,507 @@ class ExprParser ( Parser ):
             else:
                 return self.getTypedRuleContext(ExprParser.ExprContext,i)
 
+        def OR(self):
+            return self.getToken(ExprParser.OR, 0)
 
-        def NEW(self):
-            return self.getToken(ExprParser.NEW, 0)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterOr" ):
+                listener.enterOr(self)
 
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitOr" ):
+                listener.exitOr(self)
+
+
+    class IncrementoDecrementoContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ExprParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def expr(self):
+            return self.getTypedRuleContext(ExprParser.ExprContext,0)
+
+        def INCREMENTO(self):
+            return self.getToken(ExprParser.INCREMENTO, 0)
+        def DECREMENTO(self):
+            return self.getToken(ExprParser.DECREMENTO, 0)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterIncrementoDecremento" ):
+                listener.enterIncrementoDecremento(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitIncrementoDecremento" ):
+                listener.exitIncrementoDecremento(self)
+
+
+    class ParentesisContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ExprParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def PAR_1(self):
+            return self.getToken(ExprParser.PAR_1, 0)
+        def expr(self):
+            return self.getTypedRuleContext(ExprParser.ExprContext,0)
+
+        def PAR_2(self):
+            return self.getToken(ExprParser.PAR_2, 0)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterParentesis" ):
+                listener.enterParentesis(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitParentesis" ):
+                listener.exitParentesis(self)
+
+
+    class AccesoAtributoContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ExprParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def expr(self):
+            return self.getTypedRuleContext(ExprParser.ExprContext,0)
+
+        def PUNTO(self):
+            return self.getToken(ExprParser.PUNTO, 0)
         def IDT(self):
             return self.getToken(ExprParser.IDT, 0)
 
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterAccesoAtributo" ):
+                listener.enterAccesoAtributo(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitAccesoAtributo" ):
+                listener.exitAccesoAtributo(self)
+
+
+    class InstanciacionObjetoContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ExprParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def NEW(self):
+            return self.getToken(ExprParser.NEW, 0)
+        def IDT(self):
+            return self.getToken(ExprParser.IDT, 0)
+        def PAR_1(self):
+            return self.getToken(ExprParser.PAR_1, 0)
+        def PAR_2(self):
+            return self.getToken(ExprParser.PAR_2, 0)
         def listaArgs(self):
             return self.getTypedRuleContext(ExprParser.ListaArgsContext,0)
 
 
-        def INCREMENTO(self):
-            return self.getToken(ExprParser.INCREMENTO, 0)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterInstanciacionObjeto" ):
+                listener.enterInstanciacionObjeto(self)
 
-        def DECREMENTO(self):
-            return self.getToken(ExprParser.DECREMENTO, 0)
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitInstanciacionObjeto" ):
+                listener.exitInstanciacionObjeto(self)
+
+
+    class IgualdadContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ExprParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def expr(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(ExprParser.ExprContext)
+            else:
+                return self.getTypedRuleContext(ExprParser.ExprContext,i)
+
+        def IGUAL(self):
+            return self.getToken(ExprParser.IGUAL, 0)
+        def DIFERENTE(self):
+            return self.getToken(ExprParser.DIFERENTE, 0)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterIgualdad" ):
+                listener.enterIgualdad(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitIgualdad" ):
+                listener.exitIgualdad(self)
+
+
+    class SumaRestaContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ExprParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def expr(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(ExprParser.ExprContext)
+            else:
+                return self.getTypedRuleContext(ExprParser.ExprContext,i)
 
         def MAS(self):
             return self.getToken(ExprParser.MAS, 0)
-
         def MENOS(self):
             return self.getToken(ExprParser.MENOS, 0)
 
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSumaResta" ):
+                listener.enterSumaResta(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSumaResta" ):
+                listener.exitSumaResta(self)
+
+
+    class AccesoArregloContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ExprParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def expr(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(ExprParser.ExprContext)
+            else:
+                return self.getTypedRuleContext(ExprParser.ExprContext,i)
+
+        def COR_1(self):
+            return self.getToken(ExprParser.COR_1, 0)
+        def COR_2(self):
+            return self.getToken(ExprParser.COR_2, 0)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterAccesoArreglo" ):
+                listener.enterAccesoArreglo(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitAccesoArreglo" ):
+                listener.exitAccesoArreglo(self)
+
+
+    class OperadoresUnariosContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ExprParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def expr(self):
+            return self.getTypedRuleContext(ExprParser.ExprContext,0)
+
+        def MAS(self):
+            return self.getToken(ExprParser.MAS, 0)
+        def MENOS(self):
+            return self.getToken(ExprParser.MENOS, 0)
         def NOT(self):
             return self.getToken(ExprParser.NOT, 0)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterOperadoresUnarios" ):
+                listener.enterOperadoresUnarios(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitOperadoresUnarios" ):
+                listener.exitOperadoresUnarios(self)
+
+
+    class MulDivModContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ExprParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def expr(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(ExprParser.ExprContext)
+            else:
+                return self.getTypedRuleContext(ExprParser.ExprContext,i)
+
+        def POR(self):
+            return self.getToken(ExprParser.POR, 0)
+        def ENTRE(self):
+            return self.getToken(ExprParser.ENTRE, 0)
+        def MODULO(self):
+            return self.getToken(ExprParser.MODULO, 0)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterMulDivMod" ):
+                listener.enterMulDivMod(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitMulDivMod" ):
+                listener.exitMulDivMod(self)
+
+
+    class SuperContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ExprParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def SUPER(self):
+            return self.getToken(ExprParser.SUPER, 0)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSuper" ):
+                listener.enterSuper(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSuper" ):
+                listener.exitSuper(self)
+
+
+    class AsignacionContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ExprParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def expr(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(ExprParser.ExprContext)
+            else:
+                return self.getTypedRuleContext(ExprParser.ExprContext,i)
+
+        def ASIGNACION(self):
+            return self.getToken(ExprParser.ASIGNACION, 0)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterAsignacion" ):
+                listener.enterAsignacion(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitAsignacion" ):
+                listener.exitAsignacion(self)
+
+
+    class PreIncrementoPreDecrementoContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ExprParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def expr(self):
+            return self.getTypedRuleContext(ExprParser.ExprContext,0)
+
+        def INCREMENTO(self):
+            return self.getToken(ExprParser.INCREMENTO, 0)
+        def DECREMENTO(self):
+            return self.getToken(ExprParser.DECREMENTO, 0)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterPreIncrementoPreDecremento" ):
+                listener.enterPreIncrementoPreDecremento(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitPreIncrementoPreDecremento" ):
+                listener.exitPreIncrementoPreDecremento(self)
+
+
+    class RelacionalesContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ExprParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def expr(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(ExprParser.ExprContext)
+            else:
+                return self.getTypedRuleContext(ExprParser.ExprContext,i)
+
+        def MENOR(self):
+            return self.getToken(ExprParser.MENOR, 0)
+        def MAYOR(self):
+            return self.getToken(ExprParser.MAYOR, 0)
+        def MENOR_IGUAL(self):
+            return self.getToken(ExprParser.MENOR_IGUAL, 0)
+        def MAYOR_IGUAL(self):
+            return self.getToken(ExprParser.MAYOR_IGUAL, 0)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterRelacionales" ):
+                listener.enterRelacionales(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitRelacionales" ):
+                listener.exitRelacionales(self)
+
+
+    class AndContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ExprParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def expr(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(ExprParser.ExprContext)
+            else:
+                return self.getTypedRuleContext(ExprParser.ExprContext,i)
+
+        def AND(self):
+            return self.getToken(ExprParser.AND, 0)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterAnd" ):
+                listener.enterAnd(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitAnd" ):
+                listener.exitAnd(self)
+
+
+    class TernarioContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ExprParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def expr(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(ExprParser.ExprContext)
+            else:
+                return self.getTypedRuleContext(ExprParser.ExprContext,i)
+
+        def TERNARIO(self):
+            return self.getToken(ExprParser.TERNARIO, 0)
+        def DOS_PUNTOS(self):
+            return self.getToken(ExprParser.DOS_PUNTOS, 0)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterTernario" ):
+                listener.enterTernario(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitTernario" ):
+                listener.exitTernario(self)
+
+
+    class PrintlnContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ExprParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def SYSTEM(self):
+            return self.getToken(ExprParser.SYSTEM, 0)
+        def PUNTO(self, i:int=None):
+            if i is None:
+                return self.getTokens(ExprParser.PUNTO)
+            else:
+                return self.getToken(ExprParser.PUNTO, i)
+        def OUT(self):
+            return self.getToken(ExprParser.OUT, 0)
+        def PRINTLN(self):
+            return self.getToken(ExprParser.PRINTLN, 0)
+        def PAR_1(self):
+            return self.getToken(ExprParser.PAR_1, 0)
+        def PAR_2(self):
+            return self.getToken(ExprParser.PAR_2, 0)
+        def expr(self):
+            return self.getTypedRuleContext(ExprParser.ExprContext,0)
+
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterPrintln" ):
+                listener.enterPrintln(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitPrintln" ):
+                listener.exitPrintln(self)
+
+
+    class ThisContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ExprParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
 
         def THIS(self):
             return self.getToken(ExprParser.THIS, 0)
 
-        def SUPER(self):
-            return self.getToken(ExprParser.SUPER, 0)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterThis" ):
+                listener.enterThis(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitThis" ):
+                listener.exitThis(self)
+
+
+    class ExprLiteralContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ExprParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
 
         def literal(self):
             return self.getTypedRuleContext(ExprParser.LiteralContext,0)
 
 
-        def POR(self):
-            return self.getToken(ExprParser.POR, 0)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterExprLiteral" ):
+                listener.enterExprLiteral(self)
 
-        def ENTRE(self):
-            return self.getToken(ExprParser.ENTRE, 0)
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitExprLiteral" ):
+                listener.exitExprLiteral(self)
 
-        def MODULO(self):
-            return self.getToken(ExprParser.MODULO, 0)
 
-        def MENOR(self):
-            return self.getToken(ExprParser.MENOR, 0)
+    class AccesoAtributoSinObjetoContext(ExprContext):
 
-        def MAYOR(self):
-            return self.getToken(ExprParser.MAYOR, 0)
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ExprParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
 
-        def MENOR_IGUAL(self):
-            return self.getToken(ExprParser.MENOR_IGUAL, 0)
+        def IDT(self):
+            return self.getToken(ExprParser.IDT, 0)
 
-        def MAYOR_IGUAL(self):
-            return self.getToken(ExprParser.MAYOR_IGUAL, 0)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterAccesoAtributoSinObjeto" ):
+                listener.enterAccesoAtributoSinObjeto(self)
 
-        def IGUAL(self):
-            return self.getToken(ExprParser.IGUAL, 0)
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitAccesoAtributoSinObjeto" ):
+                listener.exitAccesoAtributoSinObjeto(self)
 
-        def DIFERENTE(self):
-            return self.getToken(ExprParser.DIFERENTE, 0)
 
-        def AND(self):
-            return self.getToken(ExprParser.AND, 0)
+    class LlamadaMetodoContext(ExprContext):
 
-        def OR(self):
-            return self.getToken(ExprParser.OR, 0)
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ExprParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
 
-        def TERNARIO(self):
-            return self.getToken(ExprParser.TERNARIO, 0)
+        def expr(self):
+            return self.getTypedRuleContext(ExprParser.ExprContext,0)
 
-        def DOS_PUNTOS(self):
-            return self.getToken(ExprParser.DOS_PUNTOS, 0)
+        def PUNTO(self):
+            return self.getToken(ExprParser.PUNTO, 0)
+        def IDT(self):
+            return self.getToken(ExprParser.IDT, 0)
+        def PAR_1(self):
+            return self.getToken(ExprParser.PAR_1, 0)
+        def PAR_2(self):
+            return self.getToken(ExprParser.PAR_2, 0)
+        def listaArgs(self):
+            return self.getTypedRuleContext(ExprParser.ListaArgsContext,0)
 
-        def ASIGNACION(self):
-            return self.getToken(ExprParser.ASIGNACION, 0)
 
-        def COR_1(self):
-            return self.getToken(ExprParser.COR_1, 0)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterLlamadaMetodo" ):
+                listener.enterLlamadaMetodo(self)
 
-        def COR_2(self):
-            return self.getToken(ExprParser.COR_2, 0)
-
-        def getRuleIndex(self):
-            return ExprParser.RULE_expr
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitLlamadaMetodo" ):
+                listener.exitLlamadaMetodo(self)
 
 
 
@@ -2533,6 +3175,10 @@ class ExprParser ( Parser ):
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,43,self._ctx)
             if la_ == 1:
+                localctx = ExprParser.PrintlnContext(self, localctx)
+                self._ctx = localctx
+                _prevctx = localctx
+
                 self.state = 363
                 self.match(ExprParser.SYSTEM)
                 self.state = 364
@@ -2558,6 +3204,9 @@ class ExprParser ( Parser ):
                 pass
 
             elif la_ == 2:
+                localctx = ExprParser.InstanciacionObjetoContext(self, localctx)
+                self._ctx = localctx
+                _prevctx = localctx
                 self.state = 373
                 self.match(ExprParser.NEW)
                 self.state = 374
@@ -2577,6 +3226,9 @@ class ExprParser ( Parser ):
                 pass
 
             elif la_ == 3:
+                localctx = ExprParser.PreIncrementoPreDecrementoContext(self, localctx)
+                self._ctx = localctx
+                _prevctx = localctx
                 self.state = 380
                 _la = self._input.LA(1)
                 if not(_la==77 or _la==78):
@@ -2589,6 +3241,9 @@ class ExprParser ( Parser ):
                 pass
 
             elif la_ == 4:
+                localctx = ExprParser.OperadoresUnariosContext(self, localctx)
+                self._ctx = localctx
+                _prevctx = localctx
                 self.state = 382
                 _la = self._input.LA(1)
                 if not(((((_la - 63)) & ~0x3f) == 0 and ((1 << (_la - 63)) & 131) != 0)):
@@ -2601,6 +3256,9 @@ class ExprParser ( Parser ):
                 pass
 
             elif la_ == 5:
+                localctx = ExprParser.ParentesisContext(self, localctx)
+                self._ctx = localctx
+                _prevctx = localctx
                 self.state = 384
                 self.match(ExprParser.PAR_1)
                 self.state = 385
@@ -2610,16 +3268,25 @@ class ExprParser ( Parser ):
                 pass
 
             elif la_ == 6:
+                localctx = ExprParser.ThisContext(self, localctx)
+                self._ctx = localctx
+                _prevctx = localctx
                 self.state = 388
                 self.match(ExprParser.THIS)
                 pass
 
             elif la_ == 7:
+                localctx = ExprParser.SuperContext(self, localctx)
+                self._ctx = localctx
+                _prevctx = localctx
                 self.state = 389
                 self.match(ExprParser.SUPER)
                 pass
 
             elif la_ == 8:
+                localctx = ExprParser.LlamadaMetodoSinObjetoContext(self, localctx)
+                self._ctx = localctx
+                _prevctx = localctx
                 self.state = 390
                 self.match(ExprParser.IDT)
                 self.state = 391
@@ -2637,11 +3304,17 @@ class ExprParser ( Parser ):
                 pass
 
             elif la_ == 9:
+                localctx = ExprParser.AccesoAtributoSinObjetoContext(self, localctx)
+                self._ctx = localctx
+                _prevctx = localctx
                 self.state = 396
                 self.match(ExprParser.IDT)
                 pass
 
             elif la_ == 10:
+                localctx = ExprParser.ExprLiteralContext(self, localctx)
+                self._ctx = localctx
+                _prevctx = localctx
                 self.state = 397
                 self.literal()
                 pass
@@ -2660,7 +3333,7 @@ class ExprParser ( Parser ):
                     self._errHandler.sync(self)
                     la_ = self._interp.adaptivePredict(self._input,45,self._ctx)
                     if la_ == 1:
-                        localctx = ExprParser.ExprContext(self, _parentctx, _parentState)
+                        localctx = ExprParser.MulDivModContext(self, ExprParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
                         self.state = 400
                         if not self.precpred(self._ctx, 14):
@@ -2678,7 +3351,7 @@ class ExprParser ( Parser ):
                         pass
 
                     elif la_ == 2:
-                        localctx = ExprParser.ExprContext(self, _parentctx, _parentState)
+                        localctx = ExprParser.SumaRestaContext(self, ExprParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
                         self.state = 403
                         if not self.precpred(self._ctx, 13):
@@ -2696,7 +3369,7 @@ class ExprParser ( Parser ):
                         pass
 
                     elif la_ == 3:
-                        localctx = ExprParser.ExprContext(self, _parentctx, _parentState)
+                        localctx = ExprParser.RelacionalesContext(self, ExprParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
                         self.state = 406
                         if not self.precpred(self._ctx, 12):
@@ -2714,7 +3387,7 @@ class ExprParser ( Parser ):
                         pass
 
                     elif la_ == 4:
-                        localctx = ExprParser.ExprContext(self, _parentctx, _parentState)
+                        localctx = ExprParser.IgualdadContext(self, ExprParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
                         self.state = 409
                         if not self.precpred(self._ctx, 11):
@@ -2732,7 +3405,7 @@ class ExprParser ( Parser ):
                         pass
 
                     elif la_ == 5:
-                        localctx = ExprParser.ExprContext(self, _parentctx, _parentState)
+                        localctx = ExprParser.AndContext(self, ExprParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
                         self.state = 412
                         if not self.precpred(self._ctx, 10):
@@ -2745,7 +3418,7 @@ class ExprParser ( Parser ):
                         pass
 
                     elif la_ == 6:
-                        localctx = ExprParser.ExprContext(self, _parentctx, _parentState)
+                        localctx = ExprParser.OrContext(self, ExprParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
                         self.state = 415
                         if not self.precpred(self._ctx, 9):
@@ -2758,7 +3431,7 @@ class ExprParser ( Parser ):
                         pass
 
                     elif la_ == 7:
-                        localctx = ExprParser.ExprContext(self, _parentctx, _parentState)
+                        localctx = ExprParser.TernarioContext(self, ExprParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
                         self.state = 418
                         if not self.precpred(self._ctx, 8):
@@ -2775,7 +3448,7 @@ class ExprParser ( Parser ):
                         pass
 
                     elif la_ == 8:
-                        localctx = ExprParser.ExprContext(self, _parentctx, _parentState)
+                        localctx = ExprParser.AsignacionContext(self, ExprParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
                         self.state = 424
                         if not self.precpred(self._ctx, 7):
@@ -2788,7 +3461,7 @@ class ExprParser ( Parser ):
                         pass
 
                     elif la_ == 9:
-                        localctx = ExprParser.ExprContext(self, _parentctx, _parentState)
+                        localctx = ExprParser.LlamadaMetodoContext(self, ExprParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
                         self.state = 427
                         if not self.precpred(self._ctx, 21):
@@ -2813,7 +3486,7 @@ class ExprParser ( Parser ):
                         pass
 
                     elif la_ == 10:
-                        localctx = ExprParser.ExprContext(self, _parentctx, _parentState)
+                        localctx = ExprParser.AccesoAtributoContext(self, ExprParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
                         self.state = 435
                         if not self.precpred(self._ctx, 20):
@@ -2826,7 +3499,7 @@ class ExprParser ( Parser ):
                         pass
 
                     elif la_ == 11:
-                        localctx = ExprParser.ExprContext(self, _parentctx, _parentState)
+                        localctx = ExprParser.AccesoArregloContext(self, ExprParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
                         self.state = 438
                         if not self.precpred(self._ctx, 18):
@@ -2841,7 +3514,7 @@ class ExprParser ( Parser ):
                         pass
 
                     elif la_ == 12:
-                        localctx = ExprParser.ExprContext(self, _parentctx, _parentState)
+                        localctx = ExprParser.IncrementoDecrementoContext(self, ExprParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
                         self.state = 443
                         if not self.precpred(self._ctx, 17):
@@ -2892,6 +3565,14 @@ class ExprParser ( Parser ):
 
         def getRuleIndex(self):
             return ExprParser.RULE_listaArgs
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterListaArgs" ):
+                listener.enterListaArgs(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitListaArgs" ):
+                listener.exitListaArgs(self)
 
 
 
@@ -2953,6 +3634,14 @@ class ExprParser ( Parser ):
 
         def getRuleIndex(self):
             return ExprParser.RULE_literal
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterLiteral" ):
+                listener.enterLiteral(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitLiteral" ):
+                listener.exitLiteral(self)
 
 
 
