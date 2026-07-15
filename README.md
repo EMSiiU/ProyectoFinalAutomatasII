@@ -60,22 +60,3 @@ streamlit run app.py
 deactivate
 ```
 
-# Instrucciones si tienes problemas con el pip
-```
-python -m venv .venv --without-pip
-```
-
-```
-.\.venv\Scripts\Activate.ps1
-```
-
-## Instalar pip manualmente
-```
-Invoke-WebRequest https://bootstrap.pypa.io/get-pip.py -OutFile get-pip.py
-python get-pip.py
-
-python -m pip --version
-```
-```
-python -m pip install -r requirements.txt
-```

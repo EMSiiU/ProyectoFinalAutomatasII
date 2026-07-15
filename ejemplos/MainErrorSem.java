@@ -3,7 +3,7 @@ public class MainErrorSem {
         int edad = 18;
 
         //comentariodeprueba
-        String adulto = "No";
+        int adulto = "No";
         if (anos >= 18) {
             adulto = "Sí";
         }

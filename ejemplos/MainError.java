@@ -3,6 +3,8 @@ public class MainError {
         int edad = 18;
         //comentariodeprueba
         String 2adulto = "No";
+        @
+        #
         if (edad >= 18) {
             adulto = "Sí";
         }
