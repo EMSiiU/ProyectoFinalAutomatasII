@@ -33,7 +33,7 @@ parametro: tipo IDT;
 bloque: LLA_1 sentencia* LLA_2;
 
 sentencia: bloque
-    | declaracionVariable
+    | declaracionVariable   
     | sentenciaIf
     | sentenciaFor
     | sentenciaWhile
@@ -67,28 +67,29 @@ sentenciaReturn: RETURN expr? PUNTO_COMA;
 sentenciaExpr: expr PUNTO_COMA;
 
 expr: 
-    SYSTEM PUNTO OUT PUNTO PRINTLN PAR_1 expr? PAR_2      
-    | expr PUNTO IDT PAR_1 listaArgs? PAR_2                 
-    | expr PUNTO IDT                                        
-    | NEW IDT PAR_1 listaArgs? PAR_2                       
-    | expr COR_1 expr COR_2                                
-    | expr (INCREMENTO | DECREMENTO)                        
-    | (INCREMENTO | DECREMENTO) expr                        
-    | (MAS | MENOS | NOT) expr                              
-    | expr (POR | ENTRE | MODULO) expr                      
-    | expr (MAS | MENOS) expr                               
-    | expr (MENOR | MAYOR | MENOR_IGUAL | MAYOR_IGUAL) expr 
-    | expr (IGUAL | DIFERENTE) expr                          
-    | expr AND expr                                          
-    | expr OR expr                                           
-    | expr TERNARIO expr DOS_PUNTOS expr                     
-    | <assoc=right> expr ASIGNACION expr                     
-    | PAR_1 expr PAR_2                                       
-    | THIS                                                    
-    | SUPER                                                   
-    | IDT PAR_1 listaArgs? PAR_2                             
-    | IDT                                                     
-    | literal;
+    SYSTEM PUNTO OUT PUNTO PRINTLN PAR_1 expr? PAR_2      # Println
+    | expr PUNTO IDT PAR_1 listaArgs? PAR_2               # LlamadaMetodo  
+    | expr PUNTO IDT                                      # AccesoAtributo  
+    | NEW IDT PAR_1 listaArgs? PAR_2                      # InstanciacionObjeto 
+    | expr COR_1 expr COR_2                               # AccesoArreglo 
+    | expr (INCREMENTO | DECREMENTO)                      # IncrementoDecremento  
+    | (INCREMENTO | DECREMENTO) expr                      # PreIncrementoPreDecremento  
+    | (MAS | MENOS | NOT) expr                            # OperadoresUnarios
+    | expr (POR | ENTRE | MODULO) expr                    # MulDivMod  
+    | expr (MAS | MENOS) expr                             # SumaResta  
+    | expr (MENOR | MAYOR | MENOR_IGUAL | MAYOR_IGUAL) expr # Relacionales
+    | expr (IGUAL | DIFERENTE) expr                         # Igualdad 
+    | expr AND expr                                         # And 
+    | expr OR expr                                          # Or 
+    | expr TERNARIO expr DOS_PUNTOS expr                    # Ternario 
+    | <assoc=right> expr ASIGNACION expr                    # Asignacion  
+    | PAR_1 expr PAR_2                                      # Parentesis 
+    | THIS                                                  # This  
+    | SUPER                                                 # Super  
+    | IDT PAR_1 listaArgs? PAR_2                            # LlamadaMetodoSinObjeto 
+    | IDT                                                   # AccesoAtributoSinObjeto  
+    | literal                                               # ExprLiteral
+    ;
 
 listaArgs: expr (COMA expr)*;
 

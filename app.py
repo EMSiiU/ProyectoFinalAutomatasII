@@ -2,6 +2,7 @@ import streamlit as st
 from validadores.archivo import Archivo
 from analizadores.analizador_lexico import AnalizadorLexico
 from analizadores.analizador_sintactico import AnalizadorSintactico
+from analizadores.analizador_semantico import AnalizadorSemantico
 
 
 class App:
@@ -10,6 +11,7 @@ class App:
         st.set_page_config(page_title="Poyecto", layout="wide")
         self.analizador_lexico = AnalizadorLexico()
         self.analizador_sintactico = AnalizadorSintactico()
+        self.analizador_semantico = AnalizadorSemantico()
 
     def ejecutar(self):
         st.title("Proyecto Lenguajes y Automatas II")
@@ -76,6 +78,22 @@ class App:
         else:
             st.error("Se encontraron errores sintacticos")
             st.dataframe(errores_sintacticos, use_container_width=True)
+
+        # Fase semantica
+        if len(errores_sintacticos) > 0:
+            st.info("Se omite el analisis semantico porque hay errores sintacticos.")
+            return
+
+        st.subheader("Analisis semantico")
+        resultados_semanticos = self.analizador_semantico.analizar(codigo)
+
+        if len(resultados_semanticos) == 0:
+            st.success("No hay errores semanticos")
+        else:
+            st.error("Se encontraron errores semanticos")
+            st.dataframe(resultados_semanticos, use_container_width=True)
+
+        
 
 
 if __name__ == "__main__":
