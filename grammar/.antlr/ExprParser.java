@@ -1,4 +1,4 @@
-// Generated from c:/Escuela/ProyectoFinalAutomatasII/grammar/Expr.g4 by ANTLR 4.13.1
+// Generated from c:/Users/azare/OneDrive/Documents/GitHub/ProyectoFinalAutomatasII/grammar/Expr.g4 by ANTLR 4.13.1
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -2030,6 +2030,198 @@ public class ExprParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class ExprContext extends ParserRuleContext {
+		public ExprContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_expr; }
+	 
+		public ExprContext() { }
+		public void copyFrom(ExprContext ctx) {
+			super.copyFrom(ctx);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class LlamadaMetodoSinObjetoContext extends ExprContext {
+		public TerminalNode IDT() { return getToken(ExprParser.IDT, 0); }
+		public TerminalNode PAR_1() { return getToken(ExprParser.PAR_1, 0); }
+		public TerminalNode PAR_2() { return getToken(ExprParser.PAR_2, 0); }
+		public ListaArgsContext listaArgs() {
+			return getRuleContext(ListaArgsContext.class,0);
+		}
+		public LlamadaMetodoSinObjetoContext(ExprContext ctx) { copyFrom(ctx); }
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class OrContext extends ExprContext {
+		public List<ExprContext> expr() {
+			return getRuleContexts(ExprContext.class);
+		}
+		public ExprContext expr(int i) {
+			return getRuleContext(ExprContext.class,i);
+		}
+		public TerminalNode OR() { return getToken(ExprParser.OR, 0); }
+		public OrContext(ExprContext ctx) { copyFrom(ctx); }
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class IncrementoDecrementoContext extends ExprContext {
+		public ExprContext expr() {
+			return getRuleContext(ExprContext.class,0);
+		}
+		public TerminalNode INCREMENTO() { return getToken(ExprParser.INCREMENTO, 0); }
+		public TerminalNode DECREMENTO() { return getToken(ExprParser.DECREMENTO, 0); }
+		public IncrementoDecrementoContext(ExprContext ctx) { copyFrom(ctx); }
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class ParentesisContext extends ExprContext {
+		public TerminalNode PAR_1() { return getToken(ExprParser.PAR_1, 0); }
+		public ExprContext expr() {
+			return getRuleContext(ExprContext.class,0);
+		}
+		public TerminalNode PAR_2() { return getToken(ExprParser.PAR_2, 0); }
+		public ParentesisContext(ExprContext ctx) { copyFrom(ctx); }
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class AccesoAtributoContext extends ExprContext {
+		public ExprContext expr() {
+			return getRuleContext(ExprContext.class,0);
+		}
+		public TerminalNode PUNTO() { return getToken(ExprParser.PUNTO, 0); }
+		public TerminalNode IDT() { return getToken(ExprParser.IDT, 0); }
+		public AccesoAtributoContext(ExprContext ctx) { copyFrom(ctx); }
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class InstanciacionObjetoContext extends ExprContext {
+		public TerminalNode NEW() { return getToken(ExprParser.NEW, 0); }
+		public TerminalNode IDT() { return getToken(ExprParser.IDT, 0); }
+		public TerminalNode PAR_1() { return getToken(ExprParser.PAR_1, 0); }
+		public TerminalNode PAR_2() { return getToken(ExprParser.PAR_2, 0); }
+		public ListaArgsContext listaArgs() {
+			return getRuleContext(ListaArgsContext.class,0);
+		}
+		public InstanciacionObjetoContext(ExprContext ctx) { copyFrom(ctx); }
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class IgualdadContext extends ExprContext {
+		public List<ExprContext> expr() {
+			return getRuleContexts(ExprContext.class);
+		}
+		public ExprContext expr(int i) {
+			return getRuleContext(ExprContext.class,i);
+		}
+		public TerminalNode IGUAL() { return getToken(ExprParser.IGUAL, 0); }
+		public TerminalNode DIFERENTE() { return getToken(ExprParser.DIFERENTE, 0); }
+		public IgualdadContext(ExprContext ctx) { copyFrom(ctx); }
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class SumaRestaContext extends ExprContext {
+		public List<ExprContext> expr() {
+			return getRuleContexts(ExprContext.class);
+		}
+		public ExprContext expr(int i) {
+			return getRuleContext(ExprContext.class,i);
+		}
+		public TerminalNode MAS() { return getToken(ExprParser.MAS, 0); }
+		public TerminalNode MENOS() { return getToken(ExprParser.MENOS, 0); }
+		public SumaRestaContext(ExprContext ctx) { copyFrom(ctx); }
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class AccesoArregloContext extends ExprContext {
+		public List<ExprContext> expr() {
+			return getRuleContexts(ExprContext.class);
+		}
+		public ExprContext expr(int i) {
+			return getRuleContext(ExprContext.class,i);
+		}
+		public TerminalNode COR_1() { return getToken(ExprParser.COR_1, 0); }
+		public TerminalNode COR_2() { return getToken(ExprParser.COR_2, 0); }
+		public AccesoArregloContext(ExprContext ctx) { copyFrom(ctx); }
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class OperadoresUnariosContext extends ExprContext {
+		public ExprContext expr() {
+			return getRuleContext(ExprContext.class,0);
+		}
+		public TerminalNode MAS() { return getToken(ExprParser.MAS, 0); }
+		public TerminalNode MENOS() { return getToken(ExprParser.MENOS, 0); }
+		public TerminalNode NOT() { return getToken(ExprParser.NOT, 0); }
+		public OperadoresUnariosContext(ExprContext ctx) { copyFrom(ctx); }
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class MulDivModContext extends ExprContext {
+		public List<ExprContext> expr() {
+			return getRuleContexts(ExprContext.class);
+		}
+		public ExprContext expr(int i) {
+			return getRuleContext(ExprContext.class,i);
+		}
+		public TerminalNode POR() { return getToken(ExprParser.POR, 0); }
+		public TerminalNode ENTRE() { return getToken(ExprParser.ENTRE, 0); }
+		public TerminalNode MODULO() { return getToken(ExprParser.MODULO, 0); }
+		public MulDivModContext(ExprContext ctx) { copyFrom(ctx); }
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class SuperContext extends ExprContext {
+		public TerminalNode SUPER() { return getToken(ExprParser.SUPER, 0); }
+		public SuperContext(ExprContext ctx) { copyFrom(ctx); }
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class AsignacionContext extends ExprContext {
+		public List<ExprContext> expr() {
+			return getRuleContexts(ExprContext.class);
+		}
+		public ExprContext expr(int i) {
+			return getRuleContext(ExprContext.class,i);
+		}
+		public TerminalNode ASIGNACION() { return getToken(ExprParser.ASIGNACION, 0); }
+		public AsignacionContext(ExprContext ctx) { copyFrom(ctx); }
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class PreIncrementoPreDecrementoContext extends ExprContext {
+		public ExprContext expr() {
+			return getRuleContext(ExprContext.class,0);
+		}
+		public TerminalNode INCREMENTO() { return getToken(ExprParser.INCREMENTO, 0); }
+		public TerminalNode DECREMENTO() { return getToken(ExprParser.DECREMENTO, 0); }
+		public PreIncrementoPreDecrementoContext(ExprContext ctx) { copyFrom(ctx); }
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class RelacionalesContext extends ExprContext {
+		public List<ExprContext> expr() {
+			return getRuleContexts(ExprContext.class);
+		}
+		public ExprContext expr(int i) {
+			return getRuleContext(ExprContext.class,i);
+		}
+		public TerminalNode MENOR() { return getToken(ExprParser.MENOR, 0); }
+		public TerminalNode MAYOR() { return getToken(ExprParser.MAYOR, 0); }
+		public TerminalNode MENOR_IGUAL() { return getToken(ExprParser.MENOR_IGUAL, 0); }
+		public TerminalNode MAYOR_IGUAL() { return getToken(ExprParser.MAYOR_IGUAL, 0); }
+		public RelacionalesContext(ExprContext ctx) { copyFrom(ctx); }
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class AndContext extends ExprContext {
+		public List<ExprContext> expr() {
+			return getRuleContexts(ExprContext.class);
+		}
+		public ExprContext expr(int i) {
+			return getRuleContext(ExprContext.class,i);
+		}
+		public TerminalNode AND() { return getToken(ExprParser.AND, 0); }
+		public AndContext(ExprContext ctx) { copyFrom(ctx); }
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class TernarioContext extends ExprContext {
+		public List<ExprContext> expr() {
+			return getRuleContexts(ExprContext.class);
+		}
+		public ExprContext expr(int i) {
+			return getRuleContext(ExprContext.class,i);
+		}
+		public TerminalNode TERNARIO() { return getToken(ExprParser.TERNARIO, 0); }
+		public TerminalNode DOS_PUNTOS() { return getToken(ExprParser.DOS_PUNTOS, 0); }
+		public TernarioContext(ExprContext ctx) { copyFrom(ctx); }
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class PrintlnContext extends ExprContext {
 		public TerminalNode SYSTEM() { return getToken(ExprParser.SYSTEM, 0); }
 		public List<TerminalNode> PUNTO() { return getTokens(ExprParser.PUNTO); }
 		public TerminalNode PUNTO(int i) {
@@ -2039,47 +2231,41 @@ public class ExprParser extends Parser {
 		public TerminalNode PRINTLN() { return getToken(ExprParser.PRINTLN, 0); }
 		public TerminalNode PAR_1() { return getToken(ExprParser.PAR_1, 0); }
 		public TerminalNode PAR_2() { return getToken(ExprParser.PAR_2, 0); }
-		public List<ExprContext> expr() {
-			return getRuleContexts(ExprContext.class);
+		public ExprContext expr() {
+			return getRuleContext(ExprContext.class,0);
 		}
-		public ExprContext expr(int i) {
-			return getRuleContext(ExprContext.class,i);
-		}
-		public TerminalNode NEW() { return getToken(ExprParser.NEW, 0); }
-		public TerminalNode IDT() { return getToken(ExprParser.IDT, 0); }
-		public ListaArgsContext listaArgs() {
-			return getRuleContext(ListaArgsContext.class,0);
-		}
-		public TerminalNode INCREMENTO() { return getToken(ExprParser.INCREMENTO, 0); }
-		public TerminalNode DECREMENTO() { return getToken(ExprParser.DECREMENTO, 0); }
-		public TerminalNode MAS() { return getToken(ExprParser.MAS, 0); }
-		public TerminalNode MENOS() { return getToken(ExprParser.MENOS, 0); }
-		public TerminalNode NOT() { return getToken(ExprParser.NOT, 0); }
+		public PrintlnContext(ExprContext ctx) { copyFrom(ctx); }
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class ThisContext extends ExprContext {
 		public TerminalNode THIS() { return getToken(ExprParser.THIS, 0); }
-		public TerminalNode SUPER() { return getToken(ExprParser.SUPER, 0); }
+		public ThisContext(ExprContext ctx) { copyFrom(ctx); }
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class ExprLiteralContext extends ExprContext {
 		public LiteralContext literal() {
 			return getRuleContext(LiteralContext.class,0);
 		}
-		public TerminalNode POR() { return getToken(ExprParser.POR, 0); }
-		public TerminalNode ENTRE() { return getToken(ExprParser.ENTRE, 0); }
-		public TerminalNode MODULO() { return getToken(ExprParser.MODULO, 0); }
-		public TerminalNode MENOR() { return getToken(ExprParser.MENOR, 0); }
-		public TerminalNode MAYOR() { return getToken(ExprParser.MAYOR, 0); }
-		public TerminalNode MENOR_IGUAL() { return getToken(ExprParser.MENOR_IGUAL, 0); }
-		public TerminalNode MAYOR_IGUAL() { return getToken(ExprParser.MAYOR_IGUAL, 0); }
-		public TerminalNode IGUAL() { return getToken(ExprParser.IGUAL, 0); }
-		public TerminalNode DIFERENTE() { return getToken(ExprParser.DIFERENTE, 0); }
-		public TerminalNode AND() { return getToken(ExprParser.AND, 0); }
-		public TerminalNode OR() { return getToken(ExprParser.OR, 0); }
-		public TerminalNode TERNARIO() { return getToken(ExprParser.TERNARIO, 0); }
-		public TerminalNode DOS_PUNTOS() { return getToken(ExprParser.DOS_PUNTOS, 0); }
-		public TerminalNode ASIGNACION() { return getToken(ExprParser.ASIGNACION, 0); }
-		public TerminalNode COR_1() { return getToken(ExprParser.COR_1, 0); }
-		public TerminalNode COR_2() { return getToken(ExprParser.COR_2, 0); }
-		public ExprContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
+		public ExprLiteralContext(ExprContext ctx) { copyFrom(ctx); }
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class AccesoAtributoSinObjetoContext extends ExprContext {
+		public TerminalNode IDT() { return getToken(ExprParser.IDT, 0); }
+		public AccesoAtributoSinObjetoContext(ExprContext ctx) { copyFrom(ctx); }
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class LlamadaMetodoContext extends ExprContext {
+		public ExprContext expr() {
+			return getRuleContext(ExprContext.class,0);
 		}
-		@Override public int getRuleIndex() { return RULE_expr; }
+		public TerminalNode PUNTO() { return getToken(ExprParser.PUNTO, 0); }
+		public TerminalNode IDT() { return getToken(ExprParser.IDT, 0); }
+		public TerminalNode PAR_1() { return getToken(ExprParser.PAR_1, 0); }
+		public TerminalNode PAR_2() { return getToken(ExprParser.PAR_2, 0); }
+		public ListaArgsContext listaArgs() {
+			return getRuleContext(ListaArgsContext.class,0);
+		}
+		public LlamadaMetodoContext(ExprContext ctx) { copyFrom(ctx); }
 	}
 
 	public final ExprContext expr() throws RecognitionException {
@@ -2103,6 +2289,10 @@ public class ExprParser extends Parser {
 			switch ( getInterpreter().adaptivePredict(_input,43,_ctx) ) {
 			case 1:
 				{
+				_localctx = new PrintlnContext(_localctx);
+				_ctx = _localctx;
+				_prevctx = _localctx;
+
 				setState(363);
 				match(SYSTEM);
 				setState(364);
@@ -2131,6 +2321,9 @@ public class ExprParser extends Parser {
 				break;
 			case 2:
 				{
+				_localctx = new InstanciacionObjetoContext(_localctx);
+				_ctx = _localctx;
+				_prevctx = _localctx;
 				setState(373);
 				match(NEW);
 				setState(374);
@@ -2153,6 +2346,9 @@ public class ExprParser extends Parser {
 				break;
 			case 3:
 				{
+				_localctx = new PreIncrementoPreDecrementoContext(_localctx);
+				_ctx = _localctx;
+				_prevctx = _localctx;
 				setState(380);
 				_la = _input.LA(1);
 				if ( !(_la==INCREMENTO || _la==DECREMENTO) ) {
@@ -2169,6 +2365,9 @@ public class ExprParser extends Parser {
 				break;
 			case 4:
 				{
+				_localctx = new OperadoresUnariosContext(_localctx);
+				_ctx = _localctx;
+				_prevctx = _localctx;
 				setState(382);
 				_la = _input.LA(1);
 				if ( !(((((_la - 63)) & ~0x3f) == 0 && ((1L << (_la - 63)) & 131L) != 0)) ) {
@@ -2185,6 +2384,9 @@ public class ExprParser extends Parser {
 				break;
 			case 5:
 				{
+				_localctx = new ParentesisContext(_localctx);
+				_ctx = _localctx;
+				_prevctx = _localctx;
 				setState(384);
 				match(PAR_1);
 				setState(385);
@@ -2195,18 +2397,27 @@ public class ExprParser extends Parser {
 				break;
 			case 6:
 				{
+				_localctx = new ThisContext(_localctx);
+				_ctx = _localctx;
+				_prevctx = _localctx;
 				setState(388);
 				match(THIS);
 				}
 				break;
 			case 7:
 				{
+				_localctx = new SuperContext(_localctx);
+				_ctx = _localctx;
+				_prevctx = _localctx;
 				setState(389);
 				match(SUPER);
 				}
 				break;
 			case 8:
 				{
+				_localctx = new LlamadaMetodoSinObjetoContext(_localctx);
+				_ctx = _localctx;
+				_prevctx = _localctx;
 				setState(390);
 				match(IDT);
 				setState(391);
@@ -2227,12 +2438,18 @@ public class ExprParser extends Parser {
 				break;
 			case 9:
 				{
+				_localctx = new AccesoAtributoSinObjetoContext(_localctx);
+				_ctx = _localctx;
+				_prevctx = _localctx;
 				setState(396);
 				match(IDT);
 				}
 				break;
 			case 10:
 				{
+				_localctx = new ExprLiteralContext(_localctx);
+				_ctx = _localctx;
+				_prevctx = _localctx;
 				setState(397);
 				literal();
 				}
@@ -2252,7 +2469,7 @@ public class ExprParser extends Parser {
 					switch ( getInterpreter().adaptivePredict(_input,45,_ctx) ) {
 					case 1:
 						{
-						_localctx = new ExprContext(_parentctx, _parentState);
+						_localctx = new MulDivModContext(new ExprContext(_parentctx, _parentState));
 						pushNewRecursionContext(_localctx, _startState, RULE_expr);
 						setState(400);
 						if (!(precpred(_ctx, 14))) throw new FailedPredicateException(this, "precpred(_ctx, 14)");
@@ -2272,7 +2489,7 @@ public class ExprParser extends Parser {
 						break;
 					case 2:
 						{
-						_localctx = new ExprContext(_parentctx, _parentState);
+						_localctx = new SumaRestaContext(new ExprContext(_parentctx, _parentState));
 						pushNewRecursionContext(_localctx, _startState, RULE_expr);
 						setState(403);
 						if (!(precpred(_ctx, 13))) throw new FailedPredicateException(this, "precpred(_ctx, 13)");
@@ -2292,7 +2509,7 @@ public class ExprParser extends Parser {
 						break;
 					case 3:
 						{
-						_localctx = new ExprContext(_parentctx, _parentState);
+						_localctx = new RelacionalesContext(new ExprContext(_parentctx, _parentState));
 						pushNewRecursionContext(_localctx, _startState, RULE_expr);
 						setState(406);
 						if (!(precpred(_ctx, 12))) throw new FailedPredicateException(this, "precpred(_ctx, 12)");
@@ -2312,7 +2529,7 @@ public class ExprParser extends Parser {
 						break;
 					case 4:
 						{
-						_localctx = new ExprContext(_parentctx, _parentState);
+						_localctx = new IgualdadContext(new ExprContext(_parentctx, _parentState));
 						pushNewRecursionContext(_localctx, _startState, RULE_expr);
 						setState(409);
 						if (!(precpred(_ctx, 11))) throw new FailedPredicateException(this, "precpred(_ctx, 11)");
@@ -2332,7 +2549,7 @@ public class ExprParser extends Parser {
 						break;
 					case 5:
 						{
-						_localctx = new ExprContext(_parentctx, _parentState);
+						_localctx = new AndContext(new ExprContext(_parentctx, _parentState));
 						pushNewRecursionContext(_localctx, _startState, RULE_expr);
 						setState(412);
 						if (!(precpred(_ctx, 10))) throw new FailedPredicateException(this, "precpred(_ctx, 10)");
@@ -2344,7 +2561,7 @@ public class ExprParser extends Parser {
 						break;
 					case 6:
 						{
-						_localctx = new ExprContext(_parentctx, _parentState);
+						_localctx = new OrContext(new ExprContext(_parentctx, _parentState));
 						pushNewRecursionContext(_localctx, _startState, RULE_expr);
 						setState(415);
 						if (!(precpred(_ctx, 9))) throw new FailedPredicateException(this, "precpred(_ctx, 9)");
@@ -2356,7 +2573,7 @@ public class ExprParser extends Parser {
 						break;
 					case 7:
 						{
-						_localctx = new ExprContext(_parentctx, _parentState);
+						_localctx = new TernarioContext(new ExprContext(_parentctx, _parentState));
 						pushNewRecursionContext(_localctx, _startState, RULE_expr);
 						setState(418);
 						if (!(precpred(_ctx, 8))) throw new FailedPredicateException(this, "precpred(_ctx, 8)");
@@ -2372,7 +2589,7 @@ public class ExprParser extends Parser {
 						break;
 					case 8:
 						{
-						_localctx = new ExprContext(_parentctx, _parentState);
+						_localctx = new AsignacionContext(new ExprContext(_parentctx, _parentState));
 						pushNewRecursionContext(_localctx, _startState, RULE_expr);
 						setState(424);
 						if (!(precpred(_ctx, 7))) throw new FailedPredicateException(this, "precpred(_ctx, 7)");
@@ -2384,7 +2601,7 @@ public class ExprParser extends Parser {
 						break;
 					case 9:
 						{
-						_localctx = new ExprContext(_parentctx, _parentState);
+						_localctx = new LlamadaMetodoContext(new ExprContext(_parentctx, _parentState));
 						pushNewRecursionContext(_localctx, _startState, RULE_expr);
 						setState(427);
 						if (!(precpred(_ctx, 21))) throw new FailedPredicateException(this, "precpred(_ctx, 21)");
@@ -2410,7 +2627,7 @@ public class ExprParser extends Parser {
 						break;
 					case 10:
 						{
-						_localctx = new ExprContext(_parentctx, _parentState);
+						_localctx = new AccesoAtributoContext(new ExprContext(_parentctx, _parentState));
 						pushNewRecursionContext(_localctx, _startState, RULE_expr);
 						setState(435);
 						if (!(precpred(_ctx, 20))) throw new FailedPredicateException(this, "precpred(_ctx, 20)");
@@ -2422,7 +2639,7 @@ public class ExprParser extends Parser {
 						break;
 					case 11:
 						{
-						_localctx = new ExprContext(_parentctx, _parentState);
+						_localctx = new AccesoArregloContext(new ExprContext(_parentctx, _parentState));
 						pushNewRecursionContext(_localctx, _startState, RULE_expr);
 						setState(438);
 						if (!(precpred(_ctx, 18))) throw new FailedPredicateException(this, "precpred(_ctx, 18)");
@@ -2436,7 +2653,7 @@ public class ExprParser extends Parser {
 						break;
 					case 12:
 						{
-						_localctx = new ExprContext(_parentctx, _parentState);
+						_localctx = new IncrementoDecrementoContext(new ExprContext(_parentctx, _parentState));
 						pushNewRecursionContext(_localctx, _startState, RULE_expr);
 						setState(443);
 						if (!(precpred(_ctx, 17))) throw new FailedPredicateException(this, "precpred(_ctx, 17)");
