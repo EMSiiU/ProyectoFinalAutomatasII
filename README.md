@@ -46,7 +46,7 @@ pip install -r requirements.txt
 
 ## Compilar
 ```
-java -jar $env:CLASSPATH -Dlanguage=Python3 -no-listener.\grammar\Expr.g4
+java -jar $env:CLASSPATH -Dlanguage=Python3 .\grammar\Expr.g4
 ```
 
 ## Correr app
